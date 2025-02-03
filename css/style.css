@@ -1,0 +1,238 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul, li{
+  list-style: none;
+}
+
+/* 스타일 추가: 네비게이션 메뉴 항목을 버튼처럼 스타일링 */
+
+.header-nav{
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 10px 20px;
+  ul{
+    display: flex;
+    gap: 20px;
+    li{
+      padding: 20px;
+    }
+  }
+  b{
+    color: blue;
+  }
+  ul> li:hover{
+    cursor: pointer;
+    color: blue;
+    font-style: italic;
+    transform: scale(1.1);
+  }
+}
+
+.blur-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../image\ 1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(3px); /* 원하는 흐림 정도로 설정 */
+  z-index: -1;
+}
+
+.blur-background{
+  height: 800px;
+  font-size: 28px;
+  font-weight: bold;
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  .content{
+    h1{font-size: 40px;}
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 50%;
+    background-color:transparent;
+    padding: 100px;
+    margin: 70px;
+    box-sizing: border-box;
+   p{
+    padding: 10px;
+   };
+   
+  }
+  .phone-number{
+    color: white;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border:2px solid white;
+    border-radius: 10px;
+    width: 50%;
+    padding: 20px;
+  }
+  .phone-number:hover{
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transform: scale(1.1);
+    color: black;
+    border: 3px solid blue;
+    transition: 0.4s;
+
+  }
+}
+
+.main-content{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 1000px;
+
+  .exp{
+    color: rgb(5, 0, 0);
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 100px;
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 80%;
+    height: 500px;
+    margin-bottom: 50px;
+    .exp-item{
+      font-weight: bold;
+      font-size: 40px;
+      
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    li{
+      padding: 10px;
+    }
+  }
+  .exp-em{
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin-bottom: 100px;
+  }  
+}
+
+.main-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../image\ 2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(3px); /* 원하는 흐림 정도로 설정 */
+  z-index: -1;
+
+  }
+
+.exp-content::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../image\ 3.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(3px); /* 원하는 흐림 정도로 설정 */
+  z-index: -1;
+}
+.exp-content{
+  height: 800px;
+  position: relative;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .ti2{
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 60px;
+  }
+  .exp-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li{
+      display: flex;
+      color: blue;
+      font-size: 25px;
+      font-weight: bold;
+      margin: 20px;
+      padding: 10px;
+      gap: 5px;
+      border: 3px solid black;
+      border-radius: 10px;
+      width: 300px;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      width: 300px;
+    }
+  }
+
+}
+
+.service-section{
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  div{
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+  ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+footer{
+background-color: rgba(32, 32, 32, 0.425);
+  gap: 30px;
+padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+ 
+}
