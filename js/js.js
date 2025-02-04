@@ -35,7 +35,7 @@ function openDaumPostcode(type) {
     }
 
     // 거리당 가격 계산 (예: 1km당 1000원)
-    var pricePerKm = 555;
+    var pricePerKm = 875;
     var estimatedPrice = distance * pricePerKm;
 
     // 소수점 올림 처리
