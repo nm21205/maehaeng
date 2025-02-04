@@ -250,6 +250,7 @@ ul, li{
   align-items: center;
   justify-content: center;
   height: 800px;
+  width: 100%;
   .exp-last-content{
     display: flex;
     flex-direction: column;
