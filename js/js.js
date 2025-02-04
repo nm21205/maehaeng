@@ -90,10 +90,10 @@ document.addEventListener('DOMContentLoaded', function() {
       } else if (action === 'call') {
         if (/Mobi|Android/i.test(navigator.userAgent)) {
           // 모바일인 경우
-          window.location.href = 'tel:1800-3988';
+          window.location.href = 'tel:010-7759-0652';
         } else {
           // PC인 경우
-          alert('전화번호: 1800-3988');
+          alert('전화번호: 010-7759-0652');
         }
       }
     });
@@ -103,10 +103,10 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('phoneNumber').addEventListener('click', function() {
     if (/Mobi|Android/i.test(navigator.userAgent)) {
       // 모바일인 경우
-      window.location.href = 'tel:1800-3988';
+      window.location.href = 'tel:010-7759-0652';
     } else {
       // PC인 경우
-      alert('전화번호: 1800-3988');
+      alert('전화번호: 010-7759-0652');
     }
   });
 
