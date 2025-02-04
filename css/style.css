@@ -77,9 +77,16 @@ ul, li{
    p{
     padding: 10px;
    };
-   
+
+   span{
+    height: 40px;
   }
-  .phone-number{
+  }
+  #phoneNumber{
+    height: 50px;
+  }
+
+  #phoneNumber span{
     color: white;
     margin-top: 20px;
     align-items: center;
@@ -87,17 +94,18 @@ ul, li{
     display: flex;
     border:2px solid white;
     border-radius: 10px;
-    width: 50%;
-    padding: 20px;
+    padding: 10px;
+    
   }
-  .phone-number:hover{
+  #phoneNumber span:hover{
     font-size: 30px;
     font-weight: bold;
     cursor: pointer;
     transform: scale(1.1);
     color: black;
     border: 3px solid blue;
-    transition: 0.4s;
+    transition: 0.2s;
+    padding: 20px;
 
   }
 }
@@ -111,19 +119,18 @@ ul, li{
   height: 1000px;
 
   .exp{
-    color: rgb(5, 0, 0);
-    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-size: 30px;
     font-weight: bold;
     margin-top: 100px;
-    border: 2px solid white;
+    border: 2px solid rgb(7, 4, 4);
     border-radius: 10px;
     width: 80%;
     height: 500px;
     margin-bottom: 50px;
     .exp-item{
       font-weight: bold;
-      font-size: 40px;
+      font-size: 30px;
       
     }
     display: flex;
@@ -155,7 +162,7 @@ ul, li{
   background-repeat: no-repeat;
   filter: blur(3px); /* 원하는 흐림 정도로 설정 */
   z-index: -1;
-
+  opacity: 0.8;
   }
 
 .exp-content::before{
@@ -169,7 +176,7 @@ ul, li{
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: blur(3px); /* 원하는 흐림 정도로 설정 */
+  filter: blur(4px); /* 원하는 흐림 정도로 설정 */
   z-index: -1;
 }
 .exp-content{
@@ -189,9 +196,12 @@ ul, li{
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    overflow: hidden;
     li{
       display: flex;
-      color: blue;
+      color: black;
+      -webkit-text-stroke: 1px rgb(255, 255, 255);
       font-size: 25px;
       font-weight: bold;
       margin: 20px;
@@ -204,23 +214,112 @@ ul, li{
       align-content: center;
       justify-content: center;
       width: 300px;
+      transition: border-color 0.3s ease; /* 부드러운 전환을 위한 속성 추가 */
+      overflow: hidden;
+      width: 100%;
+
     }
   }
 
 }
 
+.exp-last::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../mi.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(4px); /* 원하는 흐림 정도로 설정 */
+  z-index: -1;
+  opacity: 0.7;
+}
+
+.exp-last{
+
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 800px;
+  .exp-last-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    padding: 60px;
+    margin: 50px;
+    border-radius: 10px;
+    h1{
+      font-size: 30px;
+      font-weight: bold;
+      padding: 20px;
+    }
+    p{
+      font-size: 20px;
+      font-weight: bold;
+      padding: 10px;
+    }
+    .ex{
+      font-size: 15px;
+      font-weight: bold;
+      color: rgb(68, 0, 255);
+      transition: color 0.3s ease; /* 부드러운 전환을 위한 속성 추가 */
+      text-decoration: underline;
+      -webkit-animation: blink 1s infinite;
+      animation: blink 1s infinite;
+
+
+    }
+  }
+}
+
+
+.service-section::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../Outsourcing-symlog\ 1\ \(1\)\ 2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(3px); /* 원하는 흐림 정도로 설정 */
+  z-index: -1;
+}
+
 .service-section{
+  border: 2px solid white;
+  position: relative;
   padding-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 800px;
   div{
     font-weight: bold;
     font-size: 20px;
     padding-bottom: 20px;
   }
   ul{
+    border: 2px solid black;
+    padding: 20px;
+    color: black;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -235,4 +334,196 @@ padding: 40px;
   align-items: center;
   justify-content: space-around;
  
+}
+
+.price-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.price-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.price-section p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.price-section div {
+  margin-bottom: 15px;
+}
+
+.price-section label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.price-section input[type="text"],
+.price-section input[type="number"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.price-section button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.price-section button:hover {
+  background-color: #0056b3;
+}
+
+#priceResult {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+/* 모바일 스타일 */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .header-nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+  }
+
+  .header-nav ul {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .header-nav li {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .header-nav li:last-child {
+    border-bottom: none;
+  }
+
+  .blur-background {
+    height: auto;
+    padding: 20px;
+    display: none;
+  }
+
+  .content {
+    width: 100%;
+    padding: 20px;
+    margin: 0;
+  }
+
+  .phone-number {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .exp{
+    width: 100%;
+    height: 100%;
+ 
+    li{
+      font-size: 15px;
+    }
+    .exp-em p{
+      font-size: 5px;
+    }
+  }
+
+  .main-content, .exp-content, .service-section, .price-section {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 10px;  
+ 
+  }
+
+  .exp-last{
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   .exp-last-content{
+    p{
+      font-size:15px;
+    }
+    .ex{
+      margin:-10px;
+      font-size: 13px;
+      text-decoration: underline;
+      -webkit-animation: blink 1s infinite;
+      animation: blink 1s infinite;
+    }
+   }
+  }
+
+  .service-section{
+    div{
+      font-size: 15px;
+    }
+    ul{
+      font-size: 15px;
+    }
+    height: 500px;
+  }
+
+  .exp-main {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+  }
+
+  .exp-main li {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .price-section {
+    max-width: 100%;
+  }
+
+  .price-section input[type="text"],
+  .price-section input[type="number"] {
+    width: 100%;
+  }
+
+  .price-section button {
+    width: 100%;
+  }
 }

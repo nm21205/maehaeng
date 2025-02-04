@@ -2,19 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+  
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/103d787f99.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
   <script src="js/js.js"></script>
 </head>
 <body>
   <div class="header-nav">
-    <ul><li><b>대신</b>탁송서비스</li></ul>
+    <ul><li class="nav-item" data-action="refresh"><i class="fa-solid fa-car"></i><b>대신</b>탁송서비스</li></ul>
     <ul>
-      <li class="nav-item">차량탁송</li>
-      <li class="nav-item">탁송서비스</li>
-      <li class="nav-item">탁송절차</li>
-      <li class="nav-item">전화연결</li>
+      <li class="nav-item" data-target="mainContent">차량탁송</li>
+      <li class="nav-item" data-target="expContent">탁송절차</li>
+      <li class="nav-item" data-target="serviceSection">유지보수</li>
+      <li class="nav-item" data-target="priceSection">가격정보</li>
+      <li class="nav-item" data-action="call"><i class="fa-solid fa-phone"></i>전화연결</li>
     </ul>
   </div>
   <div class="blur-background">
@@ -23,28 +27,32 @@
       <p>대신탁송 서비스는 차량탁송의</p> 
       <p>전반적인 서비스를 제공합니다.</p>
       <p>전 지역 탁송서비스 No.1</p>
-      <p class="phone-number">1800-3988</p>
+      <p class="phone-number" id="phoneNumber"><span>1800-3988</span></p>
     </div>
   </div>
 
-    <div class="main-content">
+    <div class="main-content" id="mainContent">
       <ul class="exp">
         <li class="exp-item">차량 탁송</li>
         <li>차량을 집이나 목적지로 보내야할 때</li>
       <li>차량사고 후 정비 센터로 차량을 입,출고 할때</li>
       <li>공매, 경매 구입하신 차량을 받고자 할때</li>
       <li>차량을 신속하게 이동시키고자 할때</li>
-    </ul>
-    <div class="exp-em">
-      <p>*차량의 종류에 따라 탁송 비용이 다릅니다.</p>
-    </div>
-      
-      </div>
+      <li>트럭, 화물, 각종 특수차량 탁송 경력 보유</li>
+     </ul>
 
 
     </div>
-
-<div class="exp-content">
+    <div class="exp-last">
+      <div class="exp-last-content">
+      <h1>군용차량 탁송</h1>
+      <p>각종 군용차량 탁송 경력 보유</p>
+      <p class="ex">*각종 전술차량 가능</p>
+      <p>보안규정 준수</p>
+      <p>군 친화적 탁송 서비스</p>
+    </div>
+    </div>
+<div class="exp-content" id="expContent">
     <div class="ti2">
       탁송 서비스 절차
     </div>
@@ -59,17 +67,37 @@
 
 
 
-<section class="service-section">
+<section class="service-section" id="serviceSection">
     <div class="service-title">
       대신탁송의 사고관리는 엄격한 관리체계를 갖추고 있습니다.
     </div>
     <ul>
-      <li>완벽한 사고처리 시스템</li>
-      <li>고객의 사고처리가 끝날때까지 해당 기사와의 사고처리가 완벽하게 이루어질 수 있도록 지원합니다.</li>
+      <li>고객의 사고처리가 끝날때까지 해당 기사와의 사고처리가 완벽하게 이루어질 수 있도록 연결 지원합니다.</li>
       <li>해당 사고 기사는 사내 안전교육을 재실시 합니다</li>
     </ul>
   </section>
 
+  <div class="price-section" id="priceSection">
+    <h2>주소 검색 및 거리 측정</h2>
+    <p>출발지와 도착지의 주소를 입력하여 차량이동 거리를 확인하시고, 거리를 입력하여 가격을 계산해보세요.</p>
+    <p>현재 가격은 1톤 차량 기준으로, 차량의 종류 및, 상황에 따라<br> 가격이 다르오니 참고하세요.</p>
+     <p>*모바일 버전에서는 거리 입력만 가능 합니다.</p>
+    <div class="desktop-only">
+      <label for="txtStartAddress1">출발지 주소:</label>
+      <input type="text" id="txtStartAddress1" placeholder="출발지 주소 입력" onclick="openDaumPostcode('start')">
+    </div>
+    <div class="desktop-only">
+      <label for="txtEndAddress1">도착지 주소:</label>
+      <input type="text" id="txtEndAddress1" placeholder="도착지 주소 입력" onclick="openDaumPostcode('end')">
+    </div>
+    <button id="calculateDistanceBtn" class="desktop-only" onclick="openDaumMap()">거리 측정</button>
+    <div>
+      <label for="manualDistance">직접 입력 거리 (km):</label>
+      <input type="number" id="manualDistance" placeholder="거리를 입력하세요">
+    </div>
+    <button id="calculatePriceBtn" onclick="calculatePrice()">가격 계산</button>
+    <div id="priceResult">예상 가격: <span id="estimatedPrice">0</span> 원</div>
+  </div>
   <footer>  
     <ul>
       <li>대신탁송 서비스</li>
@@ -87,3 +115,4 @@
   </footer>
 </body>
 </html>
+
