@@ -480,6 +480,11 @@ padding: 40px;
     align-items: center;
     justify-content: center;
    .exp-last-content{
+    h1{
+      padding: 0px;
+      padding-bottom: 20px;
+
+    }
     p{
       font-size:15px;
     }
