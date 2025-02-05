@@ -16,6 +16,19 @@ function openDaumPostcode(type) {
 
 
   function openDaumMap() {
+    // 입력 필드에서 출발지와 도착지 주소를 가져옵니다.
+    const startAddress = document.getElementById('txtStartAddress1').value;
+    const endAddress = document.getElementById('txtEndAddress1').value;
+
+    // 주소 값이 올바르게 설정되었는지 확인합니다.
+    if (!startAddress || !endAddress) {
+      alert('출발지와 도착지 주소를 모두 입력하세요.');
+      return;
+    }
+
+    // 다음 지도 URL을 경로 검색 모드로 설정
+    const mapUrl = `https://map.kakao.com/?sName=${encodeURIComponent(startAddress)}&eName=${encodeURIComponent(endAddress)}`;
+
     // 데스크톱 사용자 에이전트로 새 창을 엽니다.
     const mapWindow = window.open('', '_blank');
     mapWindow.navigator.__defineGetter__('userAgent', function(){
@@ -23,7 +36,7 @@ function openDaumPostcode(type) {
     });
 
     // 다음 지도 URL을 로드합니다.
-    mapWindow.location.href = 'https://map.kakao.com/';
+    mapWindow.location.href = mapUrl;
   }
 
   function calculatePrice() {
@@ -54,7 +67,7 @@ function getRandomColor() {
 }
 
 function changeBorderColor() {
-  const items = document.querySelectorAll('.exp-main li');
+  const items = document.querySelectorAll('.exp-main li p');
   const randomColor = getRandomColor();
   items.forEach(item => {
     item.style.borderColor = randomColor;
@@ -115,4 +128,14 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // 텍스트 색상 변경을 1초마다 실행
   setInterval(changetextColor, 1000);
+});
+
+document.getElementById('someButton').addEventListener('click', function() {
+  const startAddress = document.getElementById('txtStartAddress1').value;
+  const endAddress = document.getElementById('txtEndAddress1').value;
+  
+  console.log('Start Address:', startAddress);
+  console.log('End Address:', endAddress);
+
+  openDaumMap(startAddress, endAddress);
 });
