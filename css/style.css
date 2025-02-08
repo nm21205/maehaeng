@@ -19,7 +19,7 @@ ul, li{
 /* 스타일 추가: 네비게이션 메뉴 항목을 버튼처럼 스타일링 */
 
 .header-nav{
-  font-weight: bold;
+  
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -61,7 +61,7 @@ ul, li{
 .blur-background{
   height: 800px;
   font-size: 28px;
-  font-weight: bold;
+  
   -webkit-text-stroke: 1px rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   position: relative;
@@ -108,7 +108,6 @@ ul, li{
   }
   #phoneNumber span:hover{
     font-size: 30px;
-    font-weight: bold;
     cursor: pointer;
     transform: scale(1.1);
     color: black;
@@ -130,7 +129,6 @@ ul, li{
   .exp{
     color: rgb(0, 0, 0);
     font-size: 30px;
-    font-weight: bold;
     margin-top: 100px;
     border: 2px solid rgb(7, 4, 4);
     border-radius: 10px;
@@ -138,7 +136,6 @@ ul, li{
     height: 500px;
     margin-bottom: 50px;
     .exp-item{
-      font-weight: bold;
       font-size: 30px;
       
     }
@@ -152,7 +149,6 @@ ul, li{
   }
   .exp-em{
     font-size: 25px;
-    font-weight: bold;
     color: rgb(0, 0, 0);
     margin-bottom: 100px;
   }  
@@ -197,7 +193,7 @@ ul, li{
   align-items: center;
   justify-content: center;
   .ti2{
-    font-weight: bold;
+    
     font-size: 40px;
     margin-bottom: 60px;
   }
@@ -211,7 +207,7 @@ ul, li{
       display: flex;
       color: black;
             font-size: 25px;
-      font-weight: bold;
+     
       margin: 20px;
       padding: 10px;
       gap: 5px;
@@ -262,7 +258,7 @@ p{
 
   position: relative;
   font-size: 30px;
-  font-weight: bold;
+
   color: black;
   display: flex;
   flex-direction: column;
@@ -282,18 +278,18 @@ p{
     border-radius: 10px;
     h1{
       font-size: 30px;
-      font-weight: bold;
+   
       padding: 23px;
     }
     p{
       font-size: 18px;
-      font-weight: bold;
+    
       padding: 10px;
     }
     .ex{
       font-size: 16px;
       text-decoration: none;
-      font-weight: bold;
+   
       color: rgb(68, 0, 255);
       transition: color 0.3s ease; /* 부드러운 전환을 위한 속성 추가 */
       animation: blink 1s infinite;
@@ -329,7 +325,7 @@ p{
   justify-content: center;
   height: 800px;
   div{
-    font-weight: bold;
+ 
     font-size: 20px;
     padding-bottom: 20px;
   }
@@ -339,7 +335,7 @@ p{
     color: black;
     margin-top: 30px;
     font-size: 20px;
-    font-weight: bold;
+  
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -388,7 +384,7 @@ padding: 40px;
 
 .price-section label {
   display: block;
-  font-weight: bold;
+
   margin-bottom: 15px;
 }
 
@@ -419,7 +415,7 @@ padding: 40px;
 
 #priceResult {
   font-size: 18px;
-  font-weight: bold;
+
   text-align: center;
   margin-top: 20px;
 }
@@ -567,5 +563,13 @@ padding: 40px;
 
   .price-section button {
     width: 100%;
+  }
+  footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
   }
 }
