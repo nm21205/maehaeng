@@ -530,10 +530,10 @@ padding: 40px;
 
   .service-section{
     div{
-      font-size: 15px;
+      font-size: 13px;
     }
     ul{
-      font-size: 15px;
+      font-size: 13px;
     }
     height: 500px;
   }
@@ -572,9 +572,6 @@ padding: 40px;
     gap: 10px;
     text-align: center;
   }
-  .service-section{
-  .service-title{
-    font-size: 15px;
-  }
-  }
+
 }
+
