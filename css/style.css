@@ -572,4 +572,9 @@ padding: 40px;
     gap: 10px;
     text-align: center;
   }
+  .service-section{
+  .service-title{
+    font-size: 15px;
+  }
+  }
 }
