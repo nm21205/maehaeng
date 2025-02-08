@@ -1,8 +1,17 @@
-*{
+@font-face {
+  font-family: 'SBAggroB';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'SBAggroB';
 }
+
 ul, li{
   list-style: none;
 }
@@ -214,7 +223,10 @@ ul, li{
       width: 300px;
       overflow: hidden;
       width: 100%;
+   
+    
 p{
+  height: 65px;
   border-radius: 10px;
   border: 2px solid black;
   transition: 0.3s;
@@ -222,6 +234,7 @@ p{
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
     }
   }
@@ -245,6 +258,7 @@ p{
 }
 
 .exp-last{
+  text-decoration: none;
 
   position: relative;
   font-size: 30px;
@@ -257,6 +271,7 @@ p{
   height: 800px;
   width: 100%;
   .exp-last-content{
+    width: 370px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -266,22 +281,21 @@ p{
     margin: 50px;
     border-radius: 10px;
     h1{
-      font-size: 24px;
+      font-size: 30px;
       font-weight: bold;
       padding: 23px;
     }
     p{
-      font-size: 20px;
+      font-size: 18px;
       font-weight: bold;
       padding: 10px;
     }
     .ex{
-      font-size: 15px;
+      font-size: 16px;
+      text-decoration: none;
       font-weight: bold;
       color: rgb(68, 0, 255);
       transition: color 0.3s ease; /* 부드러운 전환을 위한 속성 추가 */
-      text-decoration: underline;
-      -webkit-animation: blink 1s infinite;
       animation: blink 1s infinite;
 
 
@@ -512,7 +526,6 @@ padding: 40px;
     .ex{
       margin:-10px;
       font-size: 13px;
-      text-decoration: underline;
       -webkit-animation: blink 1s infinite;
       animation: blink 1s infinite;
     }
